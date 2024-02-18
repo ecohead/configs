@@ -4,17 +4,17 @@
 	"description": "A collection of opinionated configuration files for my personal projects",
 	"author": {
 		"name": "Aurélien Devaux",
-		"email": "oss@aureldvx.net",
+		"email": "oss@aureldvx.fr",
 		"url": "https://bento.me/aureldvx"
 	},
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/aureldvx/configs"
+		"url": "https://github.com/ecohead/configs"
 	},
 	"bugs": {
-		"url": "https://github.com/aureldvx/configs/issues",
-		"email": "oss@aureldvx.net"
+		"url": "https://github.com/ecohead/configs/issues",
+		"email": "oss@aureldvx.fr"
 	},
 	"keywords": [
 		"eslint",
