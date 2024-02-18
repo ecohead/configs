@@ -1,57 +1,57 @@
 {
-	"name": "@ecohead/configs",
-	"version": "1.0.0",
-	"description": "A collection of opinionated configuration files for my personal projects",
-	"author": {
-		"name": "Aurélien Devaux",
-		"email": "oss@aureldvx.fr",
-		"url": "https://bento.me/aureldvx"
-	},
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/ecohead/configs.git"
-	},
-	"bugs": {
-		"url": "https://github.com/ecohead/configs/issues",
-		"email": "oss@aureldvx.fr"
-	},
-	"keywords": [
-		"eslint",
-		"prettier",
-		"typescript",
-		"configuration",
-		"opinionated",
-		"dotfiles"
-	],
-	"type": "module",
-	"exports": {
-		"./eslint": "./eslint/index.cjs",
-		"./prettier": "./prettier/index.json",
-		"./tsconfig": "./typescript/index.json",
-		"./tsconfig/eslint": "./typescript/eslint.json"
-	},
-	"devDependencies": {
-		"@eslint/eslintrc": "^3.0.1",
-		"@eslint/js": "^8.56.0",
-		"@types/eslint": "^8.56.2",
-		"@types/node": "^20.11.19",
-		"@typescript-eslint/eslint-plugin": ">=7.0.1",
-		"@typescript-eslint/parser": ">=7.0.1",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-import-resolver-typescript": "^3.6.1",
-		"eslint-plugin-eslint-comments": "^3.2.0",
-		"eslint-plugin-import": "npm:eslint-plugin-i@^2.29.1",
-		"eslint-plugin-n": "^16.6.2",
-		"eslint-plugin-no-use-extend-native": "^0.5.0",
-		"eslint-plugin-promise": "^6.1.1",
-		"eslint-plugin-sonarjs": "^0.24.0",
-		"eslint-plugin-unicorn": "^51.0.1",
-		"globals": "^14.0.0"
-	},
-	"peerDependencies": {
-		"eslint": ">=8.56.0",
-		"prettier": ">=3.2.5",
-		"typescript": ">=5.3"
-	}
+  "name": "@ecohead/configs",
+  "version": "1.1.0",
+  "description": "A collection of opinionated configuration files for my personal projects",
+  "author": {
+    "name": "Aurélien Devaux",
+    "email": "oss@aureldvx.fr",
+    "url": "https://bento.me/aureldvx"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecohead/configs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ecohead/configs/issues",
+    "email": "oss@aureldvx.fr"
+  },
+  "keywords": [
+    "eslint",
+    "prettier",
+    "typescript",
+    "configuration",
+    "opinionated",
+    "dotfiles"
+  ],
+  "type": "module",
+  "exports": {
+    "./eslint": "./eslint/index.cjs",
+    "./prettier": "./prettier/index.json",
+    "./tsconfig": "./tsconfig/index.json",
+    "./tsconfig/eslint": "./tsconfig/eslint.json"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.0.1",
+    "@eslint/js": "^8.56.0",
+    "@types/eslint": "^8.56.2",
+    "@types/node": "^20.11.19",
+    "@typescript-eslint/eslint-plugin": ">=7.0.1",
+    "@typescript-eslint/parser": ">=7.0.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "npm:eslint-plugin-i@^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-no-use-extend-native": "^0.5.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-sonarjs": "^0.24.0",
+    "eslint-plugin-unicorn": "^51.0.1",
+    "globals": "^14.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.56.0",
+    "prettier": ">=3.2.5",
+    "typescript": ">=5.3"
+  }
 }
