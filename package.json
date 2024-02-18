@@ -10,7 +10,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ecohead/configs"
+		"url": "git+https://github.com/ecohead/configs.git"
 	},
 	"bugs": {
 		"url": "https://github.com/ecohead/configs/issues",
