@@ -1,6 +1,6 @@
 {
   "name": "@ecohead/configs",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A collection of opinionated configuration files for my personal projects",
   "author": {
     "name": "Aurélien Devaux",
@@ -31,7 +31,7 @@
     "./tsconfig": "./tsconfig/index.json",
     "./tsconfig/eslint": "./tsconfig/eslint.json"
   },
-  "devDependencies": {
+  "dependencies": {
     "@eslint/eslintrc": "^3.0.1",
     "@eslint/js": "^8.56.0",
     "@types/eslint": "^8.56.2",
