@@ -1,9 +1,6 @@
 /** @type {import('stylelint').Config} */
 const config = {
-	root: true,
 	extends: [
-		'stylelint-config-standard-scss',
-		'stylelint-config-prettier-scss',
 		'stylelint-config-idiomatic-order',
 	],
 	plugins: [
