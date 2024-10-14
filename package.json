@@ -24,9 +24,6 @@
 		"dotfiles"
 	],
 	"type": "module",
-	"bin": {
-		"init": "./bin/init.js"
-	},
 	"exports": {
 		"./eslint": "./eslint/index.js",
 		"./prettier": "./prettier/index.js",
