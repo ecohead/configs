@@ -18,9 +18,39 @@ export default createSharedConfig([
 			sourceType: 'module',
 		},
 		rules: {
-			'no-unused-vars': 'off',
-			'import/no-dynamic-require': 'warn',
-			'import/no-nodejs-modules': 'warn',
+			'import-x/no-unresolved': 'off',
+			'import-x/namespace': 'off',
+			'import-x/default': 'off',
+			'import-x/no-named-as-default': 'off',
+			'import-x/no-named-as-default-member': 'off',
+			'import-x/order': [
+				'error',
+				{
+					'groups': [
+						'type',
+						'builtin',
+						'external',
+						'internal',
+						'index',
+						'parent',
+						'sibling',
+						'object',
+					],
+					'pathGroups': [
+						{
+							pattern: '#*/**',
+							group: 'internal',
+						},
+					],
+					'distinctGroup': true,
+					'newlines-between': 'always',
+					'alphabetize': {
+						order: 'asc',
+						orderImportKind: 'asc',
+						caseInsensitive: true,
+					},
+				},
+			],
 		},
 	},
 ]);

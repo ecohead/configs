@@ -14,7 +14,7 @@ import { default as importX } from 'plugins/import_x.js';
 import { default as adonis } from 'plugins/adonis.js';
 import { default as tailwindcss } from 'plugins/tailwindcss.js';
 
-export const IGNORES_LIST = ['dist', 'eslint.config.js', 'vite.config.ts', 'uno.config.ts'];
+export const IGNORES_LIST = ['dist', 'eslint.config.js', 'vite.config.ts', 'uno.config.ts', 'tailwind.config.js'];
 
 /**
  * @param {import('eslint').Linter.Config[]} config

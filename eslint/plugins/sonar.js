@@ -11,6 +11,7 @@ export default createSharedConfig([
 		plugins: sonarjs,
 		rules: {
 			'sonarjs/no-duplicate-string': 'off',
+			'sonarjs/no-accessor-field-mismatch': 'off',
 		},
 	},
 ]);
