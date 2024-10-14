@@ -1,6 +1,6 @@
 {
 	"name": "@ecohead/configs",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"description": "A collection of opinionated configuration files for my personal projects",
 	"author": {
 		"name": "Aurélien Devaux",
