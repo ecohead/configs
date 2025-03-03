@@ -1,0 +1,51 @@
+{
+	"name": "@aureldvx/prettier",
+	"version": "0.0.0",
+	"description": "An opinionated Prettier configuration for my personal projects",
+	"author": {
+		"name": "Aurélien Devaux",
+		"email": "oss@aureldvx.fr",
+		"url": "https://bento.me/aureldvx"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ecohead/configs.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ecohead/configs/issues"
+	},
+	"keywords": [
+		"prettier",
+		"configuration",
+		"opinionated",
+		"dotfiles"
+	],
+	"type": "module",
+	"main": "./lib/index.js",
+	"types": "./lib/index.d.ts",
+	"files": [
+		"lib",
+		"README.md"
+	],
+	"scripts": {
+		"build": "tsup",
+		"deps": "ncu -iu"
+	},
+	"dependencies": {
+		"@prettier/plugin-xml": "3.4.1",
+		"prettier-plugin-astro": "0.14.1",
+		"prettier-plugin-packagejson": "2.5.8",
+		"prettier-plugin-tailwindcss": "0.6.11"
+	},
+	"peerDependencies": {
+		"prettier": "^3"
+	},
+	"devDependencies": {
+		"@aureldvx/tsconfig": "workspace:*",
+		"npm-check-updates": "17.1.14",
+		"prettier": "3.5.1",
+		"tsup": "^8.3.6",
+		"typescript": "5.7.3"
+	}
+}

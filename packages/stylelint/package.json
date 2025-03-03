@@ -1,0 +1,64 @@
+{
+	"name": "@aureldvx/stylelint",
+	"version": "0.0.0",
+	"description": "An opinionated Stylelint configuration for my personal projects",
+	"author": {
+		"name": "Aurélien Devaux",
+		"email": "oss@aureldvx.fr",
+		"url": "https://bento.me/aureldvx"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ecohead/configs.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ecohead/configs/issues"
+	},
+	"keywords": [
+		"stylelint",
+		"configuration",
+		"opinionated",
+		"dotfiles"
+	],
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./lib/index.js",
+			"types": "./lib/index.d.ts"
+		}
+	},
+	"files": [
+		"lib",
+		"README.md"
+	],
+	"scripts": {
+		"build": "tsup",
+		"deps": "ncu -iu",
+		"format": "prettier --write ."
+	},
+	"dependencies": {
+		"@double-great/stylelint-a11y": "3.0.4",
+		"@isnotdefined/stylelint-plugin": "6.0.0",
+		"stylelint-config-html": "1.1.0",
+		"stylelint-config-idiomatic-order": "10.0.0",
+		"stylelint-config-prettier-scss": "1.0.0",
+		"stylelint-config-standard": "37.0.0",
+		"stylelint-config-standard-scss": "14.0.0",
+		"stylelint-plugin-defensive-css": "1.0.4",
+		"stylelint-plugin-logical-css": "1.2.1",
+		"stylelint-selector-bem-pattern": "4.0.1"
+	},
+	"peerDependencies": {
+		"stylelint": "^16"
+	},
+	"devDependencies": {
+		"@aureldvx/prettier": "workspace:*",
+		"@aureldvx/tsconfig": "workspace:*",
+		"npm-check-updates": "17.1.15",
+		"prettier": "3.5.2",
+		"stylelint": "16.14.1",
+		"tsup": "8.4.0",
+		"typescript": "5.7.3"
+	}
+}

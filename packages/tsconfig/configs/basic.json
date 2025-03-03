@@ -1,0 +1,49 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		// Allow importing TypeScript files using their native extension (.ts(x)).
+		"allowImportingTsExtensions": true,
+		// Allow JavaScript files to be imported.
+		"allowJs": true,
+		// Allow default imports from modules with no default export.
+		"allowSyntheticDefaultImports": true,
+		// Allow JavaScript files to be a part of your program.
+		"checkJs": true,
+		// Generate .d.ts files from TypeScript and JavaScript files in your project.
+		"declaration": false,
+		// Create sourcemaps for d.ts files.
+		"declarationMap": false,
+		// Properly support importing CJS modules in ESM.
+		"esModuleInterop": true,
+		// Report an error when importing a file using a casing different from another import of the same file.
+		"forceConsistentCasingInFileNames": true,
+		// Ensure that each file can be transpiled without relying on other imports (complements `verbatimModuleSyntax`).
+		"isolatedModules": true,
+		// Specify a set of bundled library declaration files that describe the target runtime environment.
+		"lib": ["ES2023", "DOM", "DOM.Iterable"],
+		// Define the module system to use.
+		"module": "ESNext",
+		// Enable module resolution without file extensions on relative paths, for things like npm package imports.
+		"moduleResolution": "Bundler",
+		// Specify how TypeScript determine a file as module.
+		"moduleDetection": "force",
+		// Disable transpilation.
+		"noEmit": true,
+		// Specify an output folder for all emitted files.
+		"outDir": "./dist",
+		// Disable erasing `const enum` declarations in generated code.
+		"preserveConstEnums": true,
+		// Enable JSON imports.
+		"resolveJsonModule": true,
+		// Skip typechecking libraries and .d.ts files.
+		"skipLibCheck": true,
+		// Enable top-level await, and other modern ESM features.
+		"target": "ESNext",
+		// Path to the build info file, which is used to speed up subsequent compilations.
+		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.tsbuildinfo",
+		// Emit ECMAScript-standard-compliant class fields.
+		"useDefineForClassFields": true,
+		// Enforce the usage of type-only imports when needed, which helps to avoid bundling issues.
+		"verbatimModuleSyntax": true
+	}
+}

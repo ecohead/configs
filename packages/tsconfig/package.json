@@ -1,0 +1,43 @@
+{
+	"name": "@aureldvx/tsconfig",
+	"version": "0.0.0",
+	"description": "A collection of tsconfig files for my personal projects",
+	"author": {
+		"name": "Aurélien Devaux",
+		"email": "oss@aureldvx.fr",
+		"url": "https://bento.me/aureldvx"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ecohead/configs.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ecohead/configs/issues"
+	},
+	"keywords": [
+		"typescript",
+		"tsconfig",
+		"configuration",
+		"opinionated",
+		"dotfiles"
+	],
+	"type": "module",
+	"scripts": {
+		"deps": "ncu -iu"
+	},
+	"exports": {
+		"./*": "./configs/*.json"
+	},
+	"files": [
+		"configs",
+		"README.md"
+	],
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"devDependencies": {
+		"npm-check-updates": "17.1.14",
+		"typescript": "5.7.3"
+	}
+}
