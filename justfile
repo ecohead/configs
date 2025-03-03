@@ -22,6 +22,9 @@ vite-react-ts +args:
 astro +args:
 	pnpm -F "@apps/astro" {{args}}
 
+publish pkg:
+	cd packages/{{pkg}} && NPM_TOKEN=$NPM_TOKEN pnpm publish --access public;
+
 purge:
 	rm -rf ./node_modules \
 		apps/astro/node_modules \
