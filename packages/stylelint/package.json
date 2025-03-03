@@ -1,6 +1,6 @@
 {
 	"name": "@aureldvx/stylelint",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "An opinionated Stylelint configuration for my personal projects",
 	"author": {
 		"name": "Aurélien Devaux",
@@ -30,7 +30,8 @@
 	},
 	"files": [
 		"lib",
-		"README.md"
+		"README.md",
+		"LICENSE"
 	],
 	"scripts": {
 		"build": "tsup",

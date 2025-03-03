@@ -1,6 +1,6 @@
 {
 	"name": "@aureldvx/eslint",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "An opinionated ESLint configuration for a strict codebase",
 	"keywords": [
 		"eslint",
@@ -30,7 +30,8 @@
 	},
 	"files": [
 		"lib",
-		"README.md"
+		"README.md",
+		"LICENSE"
 	],
 	"scripts": {
 		"build": "tsup",

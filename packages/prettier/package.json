@@ -1,6 +1,6 @@
 {
 	"name": "@aureldvx/prettier",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "An opinionated Prettier configuration for my personal projects",
 	"author": {
 		"name": "Aurélien Devaux",
@@ -26,7 +26,8 @@
 	"types": "./lib/index.d.ts",
 	"files": [
 		"lib",
-		"README.md"
+		"README.md",
+		"LICENSE"
 	],
 	"scripts": {
 		"build": "tsup",
