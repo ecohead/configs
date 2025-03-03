@@ -1,4 +1,4 @@
-![](../../docs/banner.webp)
+![](https://static.aureldvx.fr/oss/aureldvx/configs/banner.webp)
 
 # ESLint
 

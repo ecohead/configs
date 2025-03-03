@@ -1,13 +1,14 @@
 {
 	"name": "@aureldvx/prettier",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "An opinionated Prettier configuration for my personal projects",
 	"author": {
 		"name": "Aurélien Devaux",
-		"email": "oss@aureldvx.fr",
+		"email": "contact@aureldvx.net",
 		"url": "https://bento.me/aureldvx"
 	},
 	"license": "MIT",
+	"homepage": "https://github.com/aureldvx/configs/packages/prettier#readme",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/aureldvx/configs.git"

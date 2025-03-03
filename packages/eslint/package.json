@@ -1,6 +1,6 @@
 {
 	"name": "@aureldvx/eslint",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "An opinionated ESLint configuration for a strict codebase",
 	"keywords": [
 		"eslint",
@@ -16,9 +16,10 @@
 		"url": "git+https://github.com/aureldvx/configs.git"
 	},
 	"license": "MIT",
+	"homepage": "https://github.com/aureldvx/configs/packages/eslint#readme",
 	"author": {
 		"name": "Aurélien Devaux",
-		"email": "oss@aureldvx.fr",
+		"email": "contact@aureldvx.net",
 		"url": "https://bento.me/aureldvx"
 	},
 	"type": "module",
