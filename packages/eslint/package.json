@@ -9,11 +9,11 @@
 		"dotfiles"
 	],
 	"bugs": {
-		"url": "https://github.com/ecohead/configs/issues"
+		"url": "https://github.com/aureldvx/configs/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/ecohead/configs.git"
+		"url": "git+https://github.com/aureldvx/configs.git"
 	},
 	"license": "MIT",
 	"author": {
