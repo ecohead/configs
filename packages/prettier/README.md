@@ -66,14 +66,14 @@ export default defineConfig({
 // Or override it with your own
 export default defineConfig({
   xml: {
-		bracketSameLine: false,
-		printWidth: 80,
-		singleAttributePerLine: false,
-		tabWidth: 2,
-		quoteAttributes: 'double',
-		selfClosingSpace: true,
-		sortAttributesByKey: true,
-		whitespaceSensitivity: 'ignore',
+    bracketSameLine: false,
+    printWidth: 80,
+    singleAttributePerLine: false,
+    tabWidth: 2,
+    quoteAttributes: 'double',
+    selfClosingSpace: true,
+    sortAttributesByKey: true,
+    whitespaceSensitivity: 'ignore',
   },
 });
 ```
@@ -88,26 +88,26 @@ import { defineConfig } from "@aureldvx/prettier";
 // With Tailwind v4
 export default defineConfig({
   tailwind: {
-  	// Required: specify the css entrypoint file.
-		tailwindStylesheet: 'src/index.css',
-		// All other ones are optional.
-		tailwindAttributes: ['class', 'className'],
-		tailwindFunctions: ['clsx', 'cva', 'cx', 'tw', 'twMerge', 'cw'],
-		tailwindPreserveWhitespace: false,
-		tailwindPreserveDuplicates: false,
+    // Required: specify the css entrypoint file.
+    tailwindStylesheet: 'src/index.css',
+    // All other ones are optional.
+    tailwindAttributes: ['class', 'className'],
+    tailwindFunctions: ['clsx', 'cva', 'cx', 'tw', 'twMerge', 'cw'],
+    tailwindPreserveWhitespace: false,
+    tailwindPreserveDuplicates: false,
   },
 });
 
 // With Tailwind v3
 export default defineConfig({
   tailwind: {
-		// If not specified, it will find a `tailwind.config.js`
-		// in the same directory as the prettier config file.
-		tailwindConfig: 'tailwind.config.js',
-		tailwindAttributes: ['class', 'className'],
-		tailwindFunctions: ['clsx', 'cva', 'cx', 'tw', 'twMerge', 'cw'],
-		tailwindPreserveWhitespace: false,
-		tailwindPreserveDuplicates: false,
+    // If not specified, it will find a `tailwind.config.js`
+    // in the same directory as the prettier config file.
+    tailwindConfig: 'tailwind.config.js',
+    tailwindAttributes: ['class', 'className'],
+    tailwindFunctions: ['clsx', 'cva', 'cx', 'tw', 'twMerge', 'cw'],
+    tailwindPreserveWhitespace: false,
+    tailwindPreserveDuplicates: false,
   },
 });
 ```
@@ -117,11 +117,11 @@ export default defineConfig({
 To edit the provided configuration, simply add the `extends` key in the `definedConfig` object parameter.
 
 ```js
-import { defineConfig } from "@aureldvx/prettier";
+import {defineConfig} from "@aureldvx/prettier";
 
 export default defineConfig({
-	extends: {
-		// Your additional configuration here
-	},
+  extends: {
+    // Your additional configuration here
+  },
 });
 ```
