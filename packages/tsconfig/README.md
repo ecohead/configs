@@ -35,5 +35,4 @@ Multiple variants are available :
 - `strict` : strictest configuration possible for a better type-safety
 - `react` : specific for react application and inherits `basic` config.
 - `react-strict` : specific for react application but inherits `strict` config.
-- `library` : configuration adapted to shared libraries
 - `node` : adapted for tooling (like ESLint configuration files with the `noEmit` flag enabled)
