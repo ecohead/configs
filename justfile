@@ -23,12 +23,10 @@ astro +args:
 	pnpm -F "@apps/astro" {{args}}
 
 bump pkg version:
-	cd packages/{{pkg}}
-	npm version {{version}}
+	cd packages/{{pkg}} && npm version {{version}}
 
 publish pkg:
-	cd packages/{{pkg}}
-	# NPM_TOKEN=$NPM_TOKEN pnpm publish --access public;
+	cd packages/{{pkg}} && NPM_TOKEN=$NPM_TOKEN pnpm publish --access public
 
 purge:
 	rm -rf ./node_modules \
