@@ -19,7 +19,7 @@ export function stylistic(
 		braceStyle: '1tbs',
 		semi: true,
 		quotes: 'single',
-		indent: 2,
+		indent: 'tab',
 		jsx: context.react,
 		blockSpacing: true,
 		arrowParens: true,
