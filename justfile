@@ -24,6 +24,8 @@ astro +args:
 
 bump pkg version:
 	cd packages/{{pkg}} && npm version {{version}}
+	git add packages/{{pkg}}/package.json
+	git commit -m "chore({{pkg}}): bump version to {{version}}"
 
 publish pkg:
 	cd packages/{{pkg}} && NPM_TOKEN=$NPM_TOKEN pnpm publish --access public
