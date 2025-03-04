@@ -18,7 +18,7 @@ export interface VitestOptions extends ExtendableConfig {
 export function vitest(context: ConfigurationContext, options?: VitestOptions): Linter.Config {
 	return {
 		name: '@aureldvx/third-party/vitest',
-		files: options.files ?? [
+		files: options?.files ?? [
 			'tests/**/*.{spec,test}.{js,jsx,ts,tsx}',
 			'src/**/*.{spec,test}.{js,jsx,ts,tsx}',
 		],
