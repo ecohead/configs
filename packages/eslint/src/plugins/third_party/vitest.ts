@@ -26,7 +26,6 @@ export function vitest(context: ConfigurationContext, options?: VitestOptions): 
 			globals: eslintVitest.environments.env.globals,
 		},
 		plugins: {
-			// @ts-expect-error - An error is reported about `context.options` which is unused here.
 			vitest: eslintVitest,
 		},
 		rules: {

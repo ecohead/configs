@@ -2,7 +2,7 @@ import eslintVitest from "@vitest/eslint-plugin";
 function vitest(context, options) {
   return {
     name: "@aureldvx/third-party/vitest",
-    files: options.files ?? [
+    files: options?.files ?? [
       "tests/**/*.{spec,test}.{js,jsx,ts,tsx}",
       "src/**/*.{spec,test}.{js,jsx,ts,tsx}"
     ],
@@ -10,7 +10,6 @@ function vitest(context, options) {
       globals: eslintVitest.environments.env.globals
     },
     plugins: {
-      // @ts-expect-error - An error is reported about `context.options` which is unused here.
       vitest: eslintVitest
     },
     rules: {

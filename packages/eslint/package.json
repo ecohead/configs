@@ -36,7 +36,8 @@
 	],
 	"scripts": {
 		"build": "tsup",
-		"deps": "ncu -iu"
+		"deps": "ncu -iu",
+		"prepare": "pnpm run build"
 	},
 	"dependencies": {
 		"@adonisjs/eslint-plugin": "2.0.0-beta.5",
