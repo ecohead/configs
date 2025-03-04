@@ -1,6 +1,6 @@
 {
 	"name": "@aureldvx/stylelint",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "An opinionated Stylelint configuration for my personal projects",
 	"author": {
 		"name": "Aurélien Devaux",
@@ -58,9 +58,9 @@
 		"@aureldvx/prettier": "workspace:*",
 		"@aureldvx/tsconfig": "workspace:*",
 		"npm-check-updates": "17.1.15",
-		"prettier": "3.5.2",
-		"stylelint": "16.14.1",
+		"prettier": "3.5.3",
+		"stylelint": "16.15.0",
 		"tsup": "8.4.0",
-		"typescript": "5.7.3"
+		"typescript": "5.8.2"
 	}
 }
