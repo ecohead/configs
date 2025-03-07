@@ -33,7 +33,7 @@
 	"scripts": {
 		"build": "tsup",
 		"deps": "ncu -iu",
-		"prepare": "pnpm run build"
+		"prepublishOnly": "pnpm run build"
 	},
 	"dependencies": {
 		"@prettier/plugin-xml": "3.4.1",
