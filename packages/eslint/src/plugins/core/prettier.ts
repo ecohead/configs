@@ -13,6 +13,7 @@ export function prettier(
 ): CorePlugin {
 	return {
 		plugin: {
+			// @ts-expect-error plugin is working correctly, only types are bad.
 			prettier: eslintPrettier,
 		},
 		rules: {
