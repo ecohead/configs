@@ -38,7 +38,7 @@
 		"build": "tsup",
 		"deps": "ncu -iu",
 		"format": "prettier --write .",
-		"prepare": "pnpm run build"
+		"prepublishOnly": "pnpm run build"
 	},
 	"dependencies": {
 		"@double-great/stylelint-a11y": "3.0.4",
