@@ -88,6 +88,9 @@ function core(context, options) {
   coreConfig.languageOptions = languageOptions;
   coreConfig.files = [...new Set(files)];
   for (const corePlugin of CORE_PLUGINS) {
+    if (!options || !options[corePlugin.name]) {
+      continue;
+    }
     const { plugin, rules, settings } = corePlugin(context, options[corePlugin.name]);
     Object.assign(coreConfig.plugins, plugin);
     Object.assign(coreConfig.rules, rules);

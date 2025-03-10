@@ -122,7 +122,7 @@ export function core(
 	coreConfig.files = [...new Set(files)];
 
 	for (const corePlugin of CORE_PLUGINS) {
-		if (!options || !options[corePlugin.name]) {
+		if (options[corePlugin.name] === false) {
 			continue;
 		}
 
