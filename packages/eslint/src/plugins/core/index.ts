@@ -21,18 +21,18 @@ import eslintAstro from 'eslint-plugin-astro';
 import astroParser from 'astro-eslint-parser';
 
 export interface CoreRulesConfiguration {
-	js?: Record<string, Linter.RuleEntry>;
-	comments?: Record<`@eslint-community/eslint-comments/${string}`, Linter.RuleEntry>;
-	deMorgan?: Record<`de-morgan/${string}`, Linter.RuleEntry>;
-	importX?: Record<`import-x/${string}`, Linter.RuleEntry>;
-	noUseExtendNative?: Record<`no-use-extend-native/${string}`, Linter.RuleEntry>;
-	node?: Record<`n/${string}`, Linter.RuleEntry>;
-	perfectionist?: Record<`perfectionist/${string}`, Linter.RuleEntry>;
-	prettier?: Record<`prettier/${string}`, Linter.RuleEntry>;
-	promise?: Record<`promise/${string}`, Linter.RuleEntry>;
-	sonar?: Record<`sonarjs/${string}`, Linter.RuleEntry>;
-	stylistic?: Record<`@stylistic/${string}`, Linter.RuleEntry>;
-	unicorn?: Record<`unicorn/${string}`, Linter.RuleEntry>;
+	js?: boolean | Record<string, Linter.RuleEntry>;
+	comments?: boolean | Record<`@eslint-community/eslint-comments/${string}`, Linter.RuleEntry>;
+	deMorgan?: boolean | Record<`de-morgan/${string}`, Linter.RuleEntry>;
+	importX?: boolean | Record<`import-x/${string}`, Linter.RuleEntry>;
+	noUseExtendNative?: boolean | Record<`no-use-extend-native/${string}`, Linter.RuleEntry>;
+	node?: boolean | Record<`n/${string}`, Linter.RuleEntry>;
+	perfectionist?: boolean | Record<`perfectionist/${string}`, Linter.RuleEntry>;
+	prettier?: boolean | Record<`prettier/${string}`, Linter.RuleEntry>;
+	promise?: boolean | Record<`promise/${string}`, Linter.RuleEntry>;
+	sonar?: boolean | Record<`sonarjs/${string}`, Linter.RuleEntry>;
+	stylistic?: boolean | Record<`@stylistic/${string}`, Linter.RuleEntry>;
+	unicorn?: boolean | Record<`unicorn/${string}`, Linter.RuleEntry>;
 }
 
 const CORE_PLUGINS = [
@@ -122,6 +122,10 @@ export function core(
 	coreConfig.files = [...new Set(files)];
 
 	for (const corePlugin of CORE_PLUGINS) {
+		if (!options || !options[corePlugin.name]) {
+			continue;
+		}
+
 		const { plugin, rules, settings } = corePlugin(context, options[corePlugin.name]);
 
 		Object.assign(coreConfig.plugins, plugin);
