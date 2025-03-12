@@ -1,12 +1,105 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
-	"extends": "./strict.json",
 	"compilerOptions": {
+		// Allow default imports from modules with no default export.
+		"allowSyntheticDefaultImports": true,
+		// Allow importing TypeScript files using their native extension (.ts(x)).
+		"allowImportingTsExtensions": true,
+		// Allow JavaScript files to be imported.
+		"allowJs": true,
+		// Allow accessing UMD globals from modules.
+		"allowUmdGlobalAccess": false,
+		// Disallow unreachable code.
+		"allowUnreachableCode": false,
+		// Disallow unused labels.
+		"allowUnusedLabels": false,
+		// Ensure 'use strict' is always emitted.
+		"alwaysStrict": true,
+		// Allow JavaScript files to be a part of your program.
+		"checkJs": true,
+		// Generate .d.ts files from TypeScript and JavaScript files in your project.
+		"declaration": false,
+		// Create sourcemaps for d.ts files.
+		"declarationMap": false,
+		// Emit design-type metadata for decorated declarations in source files.
+		"emitDecoratorMetadata": true,
+		// Properly support importing CJS modules in ESM.
+		"esModuleInterop": true,
+		// Ensure that optional properties are only assigned undefined or their specified type.
+		// It can be disturbing when using third-party libraries that don't follow this rule.
+		"exactOptionalPropertyTypes": true,
+		// Enable experimental support for TC39 stage 2 draft decorators.
 		"experimentalDecorators": true,
+		// Report an error when importing a file using a casing different from another import of the same file.
+		"forceConsistentCasingInFileNames": true,
+		// Ensure that each file can be transpiled without relying on other imports (complements `verbatimModuleSyntax`).
+		"isolatedModules": true,
+		// Specify a set of bundled library declaration files that describe the target runtime environment.
 		"lib": ["ESNext"],
+		// Define the module system to use.
 		"module": "NodeNext",
+		// Specify how TypeScript determine a file as module.
+		"moduleDetection": "force",
+		// Enable module resolution without file extensions on relative paths, for things like npm package imports.
+		"moduleResolution": "NodeNext",
+		// Disable transpilation.
+		"noEmit": true,
+		// Report errors for fallthrough cases in switch statements.
+		"noFallthroughCasesInSwitch": true,
+		// Enable error reporting for expressions and declarations with an implied `any` type.
+		"noImplicitAny": true,
+		// Ensure that all overridden methods in derived classes are marked with the override keyword.
+		"noImplicitOverride": true,
+		// Report an error when not all code paths in a function return a value.
+		"noImplicitReturns": true,
+		// Enable error reporting when `this` is given the type `any`.
+		"noImplicitThis": true,
+		// Disallow property access via index signatures.
+		"noPropertyAccessFromIndexSignature": true,
+		// Add type-checking for indexed access to objects.
+		"noUncheckedIndexedAccess": true,
+		// Check side effect imports.
+		"noUncheckedSideEffectImports": true,
+		// Enable error reporting when a local variable isn't read.
+		"noUnusedLocals": true,
+		// Raise an error when a function parameter isn't read
+		"noUnusedParameters": true,
+		// Specify an output folder for all emitted files.
+		"outDir": "./build",
+		// Disable erasing `const enum` declarations in generated code.
+		"preserveConstEnums": true,
+		// Disable emitting comments.
 		"removeComments": true,
-		"target": "ESNext"
+		// Enable JSON imports.
+		"resolveJsonModule": true,
+		// Skip typechecking libraries and .d.ts files.
+		"skipLibCheck": true,
+		// When type checking, take into account null and undefined.
+		"strictNullChecks": true,
+		// Create source map files for emitted JavaScript files.
+		"sourceMap": true,
+		// Enable all strict type-checking options.
+		"strict": true,
+		// Check that the arguments for `bind`, `call`, and `apply` methods match the original function.
+		"strictBindCallApply": true,
+		// Built-in iterators are instantiated with a 'TReturn' type of 'undefined' instead of 'any'.
+		"strictBuiltinIteratorReturn": true,
+		// When assigning functions, check to ensure parameters and the return values are subtype-compatible.
+		"strictFunctionTypes": true,
+		// Check for class properties that are declared but not set in the constructor.
+		"strictPropertyInitialization": true,
+		// Enable top-level await, and other modern ESM features.
+		"target": "ESNext",
+		// Path to the build info file, which is used to speed up subsequent compilations.
+		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.tsbuildinfo",
+		// Specify type package names to be included without being referenced in a source file.
+		"types": ["@types/node"],
+		// Emit ECMAScript-standard-compliant class fields.
+		"useDefineForClassFields": true,
+		// Default catch clause variables as `unknown` instead of `any`.
+		"useUnknownInCatchVariables": true,
+		// Enforce the usage of type-only imports when needed, which helps to avoid bundling issues.
+		"verbatimModuleSyntax": true
 	},
 	"ts-node": {
 		"swc": true
