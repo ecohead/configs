@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json.schemastore.org/tsconfig",
-	"extends": ["./strict.json"],
+	"extends": "./strict.json",
 	"compilerOptions": {
 		"jsx": "react-jsx"
 	}
