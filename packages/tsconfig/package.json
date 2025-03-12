@@ -25,8 +25,7 @@
 	],
 	"type": "module",
 	"scripts": {
-		"deps": "ncu -iu",
-		"prepublishOnly": "pnpm run build"
+		"deps": "ncu -iu"
 	},
 	"exports": {
 		"./*": "./configs/*.json",
