@@ -1,0 +1,14 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "./strict.json",
+	"compilerOptions": {
+		"experimentalDecorators": true,
+		"lib": ["ESNext"],
+		"module": "NodeNext",
+		"removeComments": true,
+		"target": "ESNext"
+	},
+	"ts-node": {
+		"swc": true
+	}
+}
