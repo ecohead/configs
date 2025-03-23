@@ -46,7 +46,7 @@
 	},
 	"devDependencies": {
 		"@aureldvx/tsconfig": "workspace:*",
-		"npm-check-updates": "17.1.15",
+		"npm-check-updates": "17.1.16",
 		"prettier": "3.5.3",
 		"tsup": "^8.4.0",
 		"typescript": "5.8.2"
