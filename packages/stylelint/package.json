@@ -49,7 +49,7 @@
 		"stylelint-config-standard": "37.0.0",
 		"stylelint-config-standard-scss": "14.0.0",
 		"stylelint-plugin-defensive-css": "1.0.4",
-		"stylelint-plugin-logical-css": "1.2.1",
+		"stylelint-plugin-logical-css": "1.2.2",
 		"stylelint-selector-bem-pattern": "4.0.1"
 	},
 	"peerDependencies": {
@@ -58,9 +58,9 @@
 	"devDependencies": {
 		"@aureldvx/prettier": "workspace:*",
 		"@aureldvx/tsconfig": "workspace:*",
-		"npm-check-updates": "17.1.15",
+		"npm-check-updates": "17.1.16",
 		"prettier": "3.5.3",
-		"stylelint": "16.15.0",
+		"stylelint": "16.16.0",
 		"tsup": "8.4.0",
 		"typescript": "5.8.2"
 	}
