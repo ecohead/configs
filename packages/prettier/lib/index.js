@@ -42,50 +42,67 @@ function defineConfig(config) {
     finalConfig["xmlSortAttributesByKey"] = true;
     finalConfig["xmlWhitespaceSensitivity"] = "ignore";
     if (typeof config.xml === "object") {
-      if ("bracketSameLine" in config.xml) {
-        finalConfig["bracketSameLine"] = config.xml.bracketSameLine;
-      }
-      if ("printWidth" in config.xml) {
-        finalConfig["printWidth"] = config.xml.printWidth;
-      }
-      if ("singleAttributePerLine" in config.xml) {
-        finalConfig["singleAttributePerLine"] = config.xml.singleAttributePerLine;
-      }
-      if ("tabWidth" in config.xml) {
-        finalConfig["tabWidth"] = config.xml.tabWidth;
-      }
-      if ("quoteAttributes" in config.xml) {
-        finalConfig["xmlQuoteAttributes"] = config.xml.quoteAttributes;
-      }
-      if ("selfClosingSpace" in config.xml) {
-        finalConfig["xmlSelfClosingSpace"] = config.xml.selfClosingSpace;
-      }
-      if ("sortAttributesByKey" in config.xml) {
-        finalConfig["xmlSortAttributesByKey"] = config.xml.sortAttributesByKey;
-      }
-      if ("whitespaceSensitivity" in config.xml) {
-        finalConfig["xmlWhitespaceSensitivity"] = config.xml.whitespaceSensitivity;
+      for (const [key, value] of Object.entries(config.xml)) {
+        finalConfig[key] = value;
       }
     }
   }
   if (config?.tailwind) {
     addPlugin("prettier-plugin-tailwindcss");
-    if (typeof config.tailwind === "object") {
-      if ("tailwindStylesheet" in config.tailwind)
-        finalConfig["tailwindStylesheet"] = config.tailwind.tailwindStylesheet;
-      if ("tailwindConfig" in config.tailwind)
-        finalConfig["tailwindConfig"] = config.tailwind.tailwindConfig;
-      finalConfig["tailwindAttributes"] = config.tailwind.tailwindAttributes ?? ["class"];
-      finalConfig["tailwindFunctions"] = config.tailwind.tailwindFunctions ?? [
-        "clsx",
-        "cva",
-        "cx",
-        "tw",
-        "twMerge",
-        "cw"
-      ];
-      finalConfig["tailwindPreserveWhitespace"] = config.tailwind.tailwindPreserveWhitespace ?? false;
-      finalConfig["tailwindPreserveDuplicates"] = config.tailwind.tailwindPreserveDuplicates ?? false;
+    if ("tailwindStylesheet" in config.tailwind) {
+      finalConfig["tailwindStylesheet"] = config.tailwind.tailwindStylesheet;
+    }
+    if ("tailwindConfig" in config.tailwind) {
+      finalConfig["tailwindConfig"] = config.tailwind.tailwindConfig;
+    }
+    finalConfig["tailwindAttributes"] = config.tailwind.tailwindAttributes ?? [
+      "class",
+      "className"
+    ];
+    finalConfig["tailwindFunctions"] = config.tailwind.tailwindFunctions ?? [
+      "clsx",
+      "cva",
+      "cx",
+      "tw",
+      "twMerge",
+      "cw"
+    ];
+    finalConfig["tailwindPreserveWhitespace"] = config.tailwind.tailwindPreserveWhitespace ?? false;
+    finalConfig["tailwindPreserveDuplicates"] = config.tailwind.tailwindPreserveDuplicates ?? false;
+  }
+  if (config?.edge) {
+    addPlugin("prettier-plugin-edgejs");
+  }
+  if (config?.sh) {
+    addPlugin("prettier-plugin-sh");
+    if (typeof config.sh === "object") {
+      for (const [key, value] of Object.entries(config.sh)) {
+        finalConfig[key] = value;
+      }
+    }
+  }
+  if (config?.svelte) {
+    addPlugin("prettier-plugin-svelte");
+    if (typeof config.svelte === "object") {
+      for (const [key, value] of Object.entries(config.svelte)) {
+        finalConfig[key] = value;
+      }
+    }
+  }
+  if (config?.sql) {
+    addPlugin("prettier-plugin-sql");
+    if (typeof config.sql === "object") {
+      for (const [key, value] of Object.entries(config.sql)) {
+        finalConfig[key] = value;
+      }
+    }
+  }
+  if (config?.toml) {
+    addPlugin("prettier-plugin-toml");
+    if (typeof config.toml === "object") {
+      for (const [key, value] of Object.entries(config.toml)) {
+        finalConfig[key] = value;
+      }
     }
   }
   if (config?.extends?.plugins) {
