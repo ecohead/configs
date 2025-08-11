@@ -58,7 +58,7 @@ export function react(context: ConfigurationContext, options?: ReactOptions): Li
 			...eslintReact.configs.flat['jsx-runtime'].rules,
 			...eslintReactRefresh.configs.recommended.rules,
 			...eslintReactPerf.configs.flat.recommended.rules,
-			...eslintReactHooks.configs.recommended,
+			...eslintReactHooks.configs.recommended.rules,
 			'react/no-unescaped-entities': 'off',
 			...(options?.rules ?? {}),
 		},

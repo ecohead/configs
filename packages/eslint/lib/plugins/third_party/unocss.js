@@ -17,10 +17,9 @@ function unocss(context, options) {
     files.push("**/*.edge");
   }
   return {
+    ...eslintUno,
     name: "@aureldvx/third-party/unocss",
     files,
-    // @ts-expect-error - An error is reported about `meta.defaultOptions` which is unused here.
-    plugins: eslintUno.plugins,
     rules: {
       ...eslintUno.rules,
       ...options?.rules ?? {}

@@ -5,7 +5,7 @@ function promise(context, rules) {
       promise: eslintPromise
     },
     rules: {
-      ...eslintPromise.configs["recommended"].rules,
+      ...eslintPromise.configs["flat/recommended"].rules,
       "promise/always-return": "off",
       ...rules ?? {}
     }

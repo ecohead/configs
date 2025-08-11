@@ -1,4 +1,4 @@
-import eslintImportX from "eslint-plugin-import-x";
+import { importX as eslintImportX } from "eslint-plugin-import-x";
 function importX(context, rules) {
   return {
     plugin: {

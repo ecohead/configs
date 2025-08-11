@@ -1,3 +1,3 @@
 import 'eslint';
-export { A as AdonisOptions, b as adonis } from '../../index-Cz7Eqr7M.js';
+export { A as AdonisOptions, b as adonis } from '../../index-B0y9L6Vy.js';
 import '../../utils.js';

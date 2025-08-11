@@ -1,3 +1,3 @@
 import '../../utils.js';
 import 'eslint';
-export { T as TypescriptOptions, t as typescript } from '../../index-Cz7Eqr7M.js';
+export { T as TypescriptOptions, t as typescript } from '../../index-B0y9L6Vy.js';

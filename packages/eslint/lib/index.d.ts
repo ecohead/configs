@@ -1,3 +1,3 @@
 import 'eslint';
-export { C as ConfigurationContext, f as defineConfig } from './index-Cz7Eqr7M.js';
+export { C as ConfigurationContext, h as defineConfig } from './index-B0y9L6Vy.js';
 import './utils.js';

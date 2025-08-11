@@ -31,9 +31,8 @@ function react(context, options) {
       ...eslintReact.configs.flat["jsx-runtime"].rules,
       ...eslintReactRefresh.configs.recommended.rules,
       ...eslintReactPerf.configs.flat.recommended.rules,
+      ...eslintReactHooks.configs.recommended.rules,
       "react/no-unescaped-entities": "off",
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
       ...options?.rules ?? {}
     },
     settings: options?.settings ?? {

@@ -1,5 +1,4 @@
 import eslintTS from "typescript-eslint";
-import globals from "globals";
 function typescript(context, options) {
   return {
     plugin: {

@@ -12,7 +12,7 @@ import { sonar } from "./sonar.js";
 import { stylistic } from "./stylistic.js";
 import { unicorn } from "./unicorn.js";
 import globals from "globals";
-import eslintPackageJSON from "eslint-plugin-package-json/configs/recommended";
+import eslintPackageJSON from "eslint-plugin-package-json";
 import tsParser from "@typescript-eslint/parser";
 import { cwd } from "node:process";
 import { typescript } from "../third_party/typescript.js";
@@ -26,11 +26,11 @@ const CORE_PLUGINS = [
   noUseExtendNative,
   node,
   perfectionist,
-  prettier,
   promise,
   sonar,
   stylistic,
-  unicorn
+  unicorn,
+  prettier
 ];
 function core(context, options) {
   const coreConfig = {
@@ -102,7 +102,7 @@ function core(context, options) {
     {
       name: "@aureldvx/core/package-json",
       files: ["**/package.json"],
-      ...eslintPackageJSON
+      ...eslintPackageJSON.configs.recommended
     }
   ];
 }

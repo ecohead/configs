@@ -1,4 +1,4 @@
-import eslintPrettier from "eslint-config-prettier";
+import eslintPrettier from "eslint-config-prettier/flat";
 function prettier(context, rules) {
   return {
     plugin: {
