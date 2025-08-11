@@ -36,19 +36,24 @@
 		"prepublishOnly": "pnpm run build"
 	},
 	"dependencies": {
-		"@prettier/plugin-xml": "3.4.1",
+		"@prettier/plugin-xml": "3.4.2",
 		"prettier-plugin-astro": "0.14.1",
-		"prettier-plugin-packagejson": "2.5.10",
-		"prettier-plugin-tailwindcss": "0.6.11"
+		"prettier-plugin-edgejs": "1.0.3",
+		"prettier-plugin-packagejson": "2.5.19",
+		"prettier-plugin-sh": "^0.18.0",
+		"prettier-plugin-sql": "^0.19.2",
+		"prettier-plugin-svelte": "^3.4.0",
+		"prettier-plugin-tailwindcss": "0.6.14",
+		"prettier-plugin-toml": "^2.0.6"
 	},
 	"peerDependencies": {
 		"prettier": "^3"
 	},
 	"devDependencies": {
 		"@aureldvx/tsconfig": "workspace:*",
-		"npm-check-updates": "17.1.16",
-		"prettier": "3.5.3",
-		"tsup": "^8.4.0",
-		"typescript": "5.8.2"
+		"npm-check-updates": "18.0.2",
+		"prettier": "3.6.2",
+		"tsup": "^8.5.0",
+		"typescript": "5.9.2"
 	}
 }

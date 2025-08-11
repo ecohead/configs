@@ -1,4 +1,9 @@
 import type { Config, Plugin } from "prettier";
+import type { PluginOptions as TailwindOptions } from "prettier-plugin-tailwindcss";
+import type { ShPrintOptions } from "prettier-plugin-sh";
+import type { PluginConfig as SvelteOptions } from "prettier-plugin-svelte";
+import type { SqlOptions } from "prettier-plugin-sql";
+import type { PrettierOptions as TomlOptions } from "prettier-plugin-toml";
 
 interface AstroOptions {
 	allowShorthand?: boolean;
@@ -16,28 +21,12 @@ interface XmlOptions {
 	whitespaceSensitivity?: "strict" | "preserve" | "ignore";
 }
 
-interface TailwindV3Options {
-	tailwindConfig?: string;
-	tailwindAttributes?: Array<string>;
-	tailwindFunctions?: Array<string>;
-	tailwindPreserveWhitespace?: boolean;
-	tailwindPreserveDuplicates?: boolean;
-}
-
-interface TailwindV4Options {
-	tailwindStylesheet: string;
-	tailwindAttributes?: Array<string>;
-	tailwindFunctions?: Array<string>;
-	tailwindPreserveWhitespace?: boolean;
-	tailwindPreserveDuplicates?: boolean;
-}
-
 interface LocalConfig {
 	/**
 	 * @description Use the formatter for tailwindcss projects
 	 * @see https://github.com/tailwindlabs/prettier-plugin-tailwindcss
 	 */
-	tailwind?: TailwindV3Options | TailwindV4Options;
+	tailwind?: TailwindOptions;
 	/**
 	 * @description Use the formatter for astro files
 	 * @see https://github.com/withastro/prettier-plugin-astro
@@ -48,6 +37,31 @@ interface LocalConfig {
 	 * @see https://github.com/prettier/plugin-xml
 	 */
 	xml?: boolean | XmlOptions;
+	/**
+	 * @description Use the formatter for edge files (Adonis.js template engine)
+	 * @see https://github.com/sajansharmanz/prettier-plugin-edgejs
+	 */
+	edge?: boolean;
+	/**
+	 * @description Use the formatter for shell scripts and other formats (e.g. bash, dockerfile, dotenv...)
+	 * @see https://github.com/un-ts/prettier/tree/master/packages/sh
+	 */
+	sh?: boolean | ShPrintOptions;
+	/**
+	 * @description Use the formatter for svelte files
+	 * @see https://github.com/sveltejs/prettier-plugin-svelte
+	 */
+	svelte?: boolean | SvelteOptions;
+	/**
+	 * @description Use the formatter for sql files/embedded sql
+	 * @see https://github.com/un-ts/prettier/tree/master/packages/sql
+	 */
+	sql?: boolean | SqlOptions;
+	/**
+	 * @description Use the formatter for toml files
+	 * @see https://github.com/un-ts/prettier/tree/master/packages/toml
+	 */
+	toml?: boolean | TomlOptions;
 	/**
 	 * @description Extend the configuration with additional options
 	 */
@@ -71,7 +85,7 @@ export function defineConfig(config?: LocalConfig) {
 		overrides: [],
 	};
 
-	function addPlugin(plugin: string | Plugin) {
+	function addPlugin(plugin: string | URL | Plugin) {
 		if (!finalConfig.plugins) finalConfig.plugins = [];
 		if (finalConfig.plugins.includes(plugin)) return;
 
@@ -111,38 +125,8 @@ export function defineConfig(config?: LocalConfig) {
 		finalConfig["xmlWhitespaceSensitivity"] = "ignore";
 
 		if (typeof config.xml === "object") {
-			if ("bracketSameLine" in config.xml) {
-				finalConfig["bracketSameLine"] = config.xml.bracketSameLine;
-			}
-
-			if ("printWidth" in config.xml) {
-				finalConfig["printWidth"] = config.xml.printWidth;
-			}
-
-			if ("singleAttributePerLine" in config.xml) {
-				finalConfig["singleAttributePerLine"] =
-					config.xml.singleAttributePerLine;
-			}
-
-			if ("tabWidth" in config.xml) {
-				finalConfig["tabWidth"] = config.xml.tabWidth;
-			}
-
-			if ("quoteAttributes" in config.xml) {
-				finalConfig["xmlQuoteAttributes"] = config.xml.quoteAttributes;
-			}
-
-			if ("selfClosingSpace" in config.xml) {
-				finalConfig["xmlSelfClosingSpace"] = config.xml.selfClosingSpace;
-			}
-
-			if ("sortAttributesByKey" in config.xml) {
-				finalConfig["xmlSortAttributesByKey"] = config.xml.sortAttributesByKey;
-			}
-
-			if ("whitespaceSensitivity" in config.xml) {
-				finalConfig["xmlWhitespaceSensitivity"] =
-					config.xml.whitespaceSensitivity;
+			for (const [key, value] of Object.entries(config.xml)) {
+				finalConfig[key] = value;
 			}
 		}
 	}
@@ -177,6 +161,50 @@ export function defineConfig(config?: LocalConfig) {
 
 		finalConfig["tailwindPreserveDuplicates"] =
 			config.tailwind.tailwindPreserveDuplicates ?? false;
+	}
+
+	if (config?.edge) {
+		addPlugin("prettier-plugin-edgejs");
+	}
+
+	if (config?.sh) {
+		addPlugin("prettier-plugin-sh");
+
+		if (typeof config.sh === "object") {
+			for (const [key, value] of Object.entries(config.sh)) {
+				finalConfig[key] = value;
+			}
+		}
+	}
+
+	if (config?.svelte) {
+		addPlugin("prettier-plugin-svelte");
+
+		if (typeof config.svelte === "object") {
+			for (const [key, value] of Object.entries(config.svelte)) {
+				finalConfig[key] = value;
+			}
+		}
+	}
+
+	if (config?.sql) {
+		addPlugin("prettier-plugin-sql");
+
+		if (typeof config.sql === "object") {
+			for (const [key, value] of Object.entries(config.sql)) {
+				finalConfig[key] = value;
+			}
+		}
+	}
+
+	if (config?.toml) {
+		addPlugin("prettier-plugin-toml");
+
+		if (typeof config.toml === "object") {
+			for (const [key, value] of Object.entries(config.toml)) {
+				finalConfig[key] = value;
+			}
+		}
 	}
 
 	if (config?.extends?.plugins) {
