@@ -1,4 +1,4 @@
-import eslintImportX from 'eslint-plugin-import-x';
+import { importX as eslintImportX } from 'eslint-plugin-import-x';
 
 import type { CorePlugin } from '../../utils.js';
 import type { ConfigurationContext } from '../../index.js';

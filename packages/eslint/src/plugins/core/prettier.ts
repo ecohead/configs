@@ -1,4 +1,4 @@
-import eslintPrettier from 'eslint-config-prettier';
+import eslintPrettier from 'eslint-config-prettier/flat';
 
 import type { CorePlugin } from '../../utils.js';
 import type { ConfigurationContext } from '../../index.js';

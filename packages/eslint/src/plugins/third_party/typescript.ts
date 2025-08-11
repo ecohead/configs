@@ -1,5 +1,4 @@
 import eslintTS from 'typescript-eslint';
-import globals from 'globals';
 
 import type { CorePlugin, ExtendableConfig } from '../../utils.js';
 import type { Linter } from 'eslint';

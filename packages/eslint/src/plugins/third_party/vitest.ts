@@ -20,12 +20,14 @@ export function vitest(context: ConfigurationContext, options?: VitestOptions): 
 		name: '@aureldvx/third-party/vitest',
 		files: options?.files ?? [
 			'tests/**/*.{spec,test}.{js,jsx,ts,tsx}',
+			'__tests__/**/*.{spec,test}.{js,jsx,ts,tsx}',
 			'src/**/*.{spec,test}.{js,jsx,ts,tsx}',
 		],
 		languageOptions: {
 			globals: eslintVitest.environments.env.globals,
 		},
 		plugins: {
+			// @ts-expect-error - An error is reported about `languageOptions.globals.suite`.
 			vitest: eslintVitest,
 		},
 		rules: {

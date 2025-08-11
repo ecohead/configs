@@ -1,30 +1,21 @@
 import globals from 'globals';
 import type { Linter } from 'eslint';
 import { core, type CoreRulesConfiguration } from './plugins/core/index.js';
-import { unocss, type UnocssOptions } from './plugins/third_party/unocss.js';
 import { adonis, type AdonisOptions } from './plugins/third_party/adonis.js';
+import { astro, type AstroOptions } from './plugins/third_party/astro.js';
 import { react, type ReactOptions } from './plugins/third_party/react.js';
 import { storybook, type StorybookOptions } from './plugins/third_party/storybook.js';
-import { vitest, type VitestOptions } from './plugins/third_party/vitest.js';
-import { astro, type AstroOptions } from './plugins/third_party/astro.js';
+import { tailwindcss, type TailwindOptions } from './plugins/third_party/tailwindcss.js';
 import { typescript, type TypescriptOptions } from './plugins/third_party/typescript.js';
-
-const defaultIgnoreList = [
-	'**/node_modules/**',
-	'**/coverage/**',
-	'**/.astro/**',
-	'**/.cache/**',
-	'**/.nuxt/**',
-	'**/.next/**',
-	'**/dist/**',
-];
+import { unocss, type UnocssOptions } from './plugins/third_party/unocss.js';
+import { vitest, type VitestOptions } from './plugins/third_party/vitest.js';
 
 interface UserConfiguration {
 	adonis?: boolean | [boolean, AdonisOptions];
 	astro?: boolean | [boolean, AstroOptions];
 	react?: boolean | [boolean, ReactOptions];
 	storybook?: boolean | [boolean, StorybookOptions];
-	// tailwindcss?: boolean | [boolean, TailwindOptions];
+	tailwindcss?: boolean | [boolean, TailwindOptions];
 	typescript?: boolean | [boolean, TypescriptOptions];
 	unocss?: boolean | [boolean, UnocssOptions];
 	vitest?: boolean | [boolean, VitestOptions];
@@ -39,12 +30,30 @@ interface LocalConfig {
 	ignore?: Array<string>;
 }
 
+function defaultIgnoreList(context: ConfigurationContext): Array<string> {
+	const ignoreList = [
+		'**/node_modules/**',
+		'**/coverage/**',
+		'**/.astro/**',
+		'**/.cache/**',
+		'**/.nuxt/**',
+		'**/.next/**',
+		'**/dist/**',
+	];
+
+	if (context.storybook) {
+		ignoreList.push('!.storybook');
+	}
+
+	return ignoreList;
+}
+
 const factories = [
 	['adonis', adonis],
 	['astro', astro],
 	['react', react],
 	['storybook', storybook],
-	// ['tailwindcss', tailwindcss],
+	['tailwindcss', tailwindcss],
 	['typescript', typescript],
 	['unocss', unocss],
 	['vitest', vitest],
@@ -74,7 +83,7 @@ export function defineConfig(config?: LocalConfig): Array<Linter.Config> {
 		/* Ignores files globally. */
 		{
 			name: '@aureldvx/core/ignore',
-			ignores: [...defaultIgnoreList, ...(ignore ?? [])],
+			ignores: [...defaultIgnoreList(context), ...(ignore ?? [])],
 		},
 		/* Global options. */
 		{
@@ -108,10 +117,22 @@ export function defineConfig(config?: LocalConfig): Array<Linter.Config> {
 				const [enabled, options] = plugins[name];
 
 				if (enabled) {
-					finalConfig.push(factory(context, options));
+					const instance = factory(context, options);
+
+					if (Array.isArray(instance)) {
+						finalConfig.push(...instance);
+					} else {
+						finalConfig.push(instance);
+					}
 				}
 			} else if (plugins[name] === true) {
-				finalConfig.push(factory(context));
+				const instance = factory(context);
+
+				if (Array.isArray(instance)) {
+					finalConfig.push(...instance);
+				} else {
+					finalConfig.push(instance);
+				}
 			}
 		}
 	}

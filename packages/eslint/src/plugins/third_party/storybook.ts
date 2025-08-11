@@ -15,9 +15,8 @@ export function storybook(
 	options?: StorybookOptions,
 ): Linter.Config {
 	return {
+		...eslintStorybook.configs['flat/recommended'],
 		name: '@aureldvx/third-party/storybook',
-		files: eslintStorybook.configs['flat/recommended'][0].files,
-		plugins: eslintStorybook.configs['flat/recommended'][0].plugins,
 		rules: {
 			...eslintStorybook.configs['flat/recommended'][0].rules,
 			...(options?.rules ?? {}),
