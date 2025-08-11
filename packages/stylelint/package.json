@@ -46,20 +46,20 @@
 		"stylelint-config-html": "1.1.0",
 		"stylelint-config-idiomatic-order": "10.0.0",
 		"stylelint-config-prettier-scss": "1.0.0",
-		"stylelint-config-standard": "37.0.0",
-		"stylelint-config-standard-scss": "14.0.0",
+		"stylelint-config-standard": "39.0.0",
+		"stylelint-config-standard-scss": "15.0.1",
 		"stylelint-plugin-defensive-css": "1.0.4",
-		"stylelint-plugin-logical-css": "1.2.2",
+		"stylelint-plugin-logical-css": "1.2.3",
 		"stylelint-selector-bem-pattern": "4.0.1"
 	},
 	"devDependencies": {
 		"@aureldvx/prettier": "workspace:*",
 		"@aureldvx/tsconfig": "workspace:*",
-		"npm-check-updates": "17.1.16",
-		"prettier": "3.5.3",
-		"stylelint": "16.16.0",
-		"tsup": "8.4.0",
-		"typescript": "5.8.2"
+		"npm-check-updates": "18.0.2",
+		"prettier": "3.6.2",
+		"stylelint": "16.23.1",
+		"tsup": "8.5.0",
+		"typescript": "5.9.2"
 	},
 	"peerDependencies": {
 		"stylelint": "^16"
