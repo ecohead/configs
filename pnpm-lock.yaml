@@ -393,11 +393,11 @@ importers:
   packages/tsconfig:
     devDependencies:
       npm-check-updates:
-        specifier: 17.1.16
-        version: 17.1.16
+        specifier: 18.0.2
+        version: 18.0.2
       typescript:
-        specifier: 5.8.2
-        version: 5.8.2
+        specifier: 5.9.2
+        version: 5.9.2
 
 packages:
 
@@ -3694,11 +3694,6 @@ packages:
     engines: {node: ^18.18.0 || >=20.0.0, npm: '>=8.12.1'}
     hasBin: true
 
-  npm-check-updates@17.1.16:
-    resolution: {integrity: sha512-9nohkfjLRzLfsLVGbO34eXBejvrOOTuw5tvNammH73KEFG5XlFoi3G2TgjTExHtnrKWCbZ+mTT+dbNeSjASIPw==}
-    engines: {node: ^18.18.0 || >=20.0.0, npm: '>=8.12.1'}
-    hasBin: true
-
   npm-check-updates@18.0.2:
     resolution: {integrity: sha512-9uVFZUCg5oDOcbzdsrJ4BEvq2gikd23tXuF5mqpl4mxVl051lzB00Xmd7ZVjVWY3XNUF3BQKWlN/qmyD8/bwrA==}
     engines: {node: ^18.18.0 || >=20.0.0, npm: '>=8.12.1'}
@@ -4813,11 +4808,6 @@ packages:
 
   typescript@5.7.3:
     resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
-    engines: {node: '>=14.17'}
-    hasBin: true
-
-  typescript@5.8.2:
-    resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -8951,8 +8941,6 @@ snapshots:
 
   npm-check-updates@17.1.15: {}
 
-  npm-check-updates@17.1.16: {}
-
   npm-check-updates@18.0.2: {}
 
   obj-props@2.0.0: {}
@@ -10322,8 +10310,6 @@ snapshots:
       - supports-color
 
   typescript@5.7.3: {}
-
-  typescript@5.8.2: {}
 
   typescript@5.9.2: {}
 
