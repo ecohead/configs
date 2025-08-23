@@ -1,6 +1,6 @@
 {
 	"name": "@aureldvx/eslint",
-	"version": "1.6.0",
+	"version": "1.6.1",
 	"description": "An opinionated ESLint configuration for a strict codebase",
 	"keywords": [
 		"eslint",
