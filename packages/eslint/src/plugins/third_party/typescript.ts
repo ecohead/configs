@@ -14,7 +14,6 @@ export interface TypescriptOptions extends ExtendableConfig {
 export function typescript(context: ConfigurationContext, options?: TypescriptOptions): CorePlugin {
 	return {
 		plugin: {
-			// @ts-expect-error - An error is reported about `visitorKeys` which is unused here.
 			'@typescript-eslint': eslintTS.plugin,
 		},
 		rules: {
