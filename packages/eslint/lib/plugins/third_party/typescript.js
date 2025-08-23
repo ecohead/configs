@@ -2,7 +2,6 @@ import eslintTS from "typescript-eslint";
 function typescript(context, options) {
   return {
     plugin: {
-      // @ts-expect-error - An error is reported about `visitorKeys` which is unused here.
       "@typescript-eslint": eslintTS.plugin
     },
     rules: {
